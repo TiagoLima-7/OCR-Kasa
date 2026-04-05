@@ -1,0 +1,22 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+        height: 68px;
+        width: 210px;
+    }
+
+    nav ul {
+        display: flex;
+        gap: 57px;
+
+        li a {
+            text-transform: capitalize;
+            font-size: 24px;
+            font-weight: 500;
+            color: #000;
+        }
+    }
+}

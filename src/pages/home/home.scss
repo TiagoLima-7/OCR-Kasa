@@ -1,0 +1,9 @@
+.accomodation-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 60px;
+    row-gap: 50px;
+    background-color: rgba(246, 246, 246, 1);
+    border-radius: 25px;
+    padding: 50px 56px 43px;
+}
