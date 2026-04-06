@@ -1,15 +1,17 @@
+import { Link } from "react-router-dom";
 import "./style.scss";
 
 const AccomodationCard = ({ accomodation }) => {
   return (
-    <div
+    <Link
+      to={`/accomodation/${accomodation.id}`}
       className="accomodation-card"
       style={{ backgroundImage: `URL(${accomodation.cover})` }}
     >
       <div className="card-overlay">
-        <p className="card-title">{accomodation.title}</p>
+        <h2 className="card-title">{accomodation.title}</h2>
       </div>
-    </div>
+    </Link>
   );
 };
 

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Logo from "../../assets/images/logo.png";
 import "./style.scss";
 
@@ -9,12 +9,21 @@ const Header = () => {
       <nav>
         <ul>
           <li>
-            <Link to="/">accueil</Link>
+            <NavLink
+              to="/"
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
+              accueil
+            </NavLink>
           </li>
           <li>
-            <Link to="/about-us" href="">
+            <NavLink
+              to="/about-us"
+              href=""
+              className={({ isActive }) => (isActive ? "active" : "")}
+            >
               à propos
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </nav>
