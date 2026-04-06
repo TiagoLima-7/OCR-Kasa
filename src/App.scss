@@ -22,9 +22,11 @@ body {
     margin: 0 auto;
     padding: 45px 100px 0;
     font-family: 'Montserrat';
+    min-height: 100vh;
 }
 
 main {
     max-width: 1440px;
+    padding: 0 100px;
     margin: 0 auto;
 }
