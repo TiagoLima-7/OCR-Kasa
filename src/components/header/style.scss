@@ -1,6 +1,5 @@
 header {
-    max-width: 1440px;
-    padding: 0 100px;
+    max-width: 1240px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -26,4 +25,41 @@ header {
             }
         }
     }
+
+    @media screen and (max-width: 991px) {
+        padding: 0;
+    }
+
+    @media screen and (max-width: 768px) {
+        .logo {
+            width: 170px;
+            height: auto;
+        }
+
+        nav ul {
+            gap: 30px;
+
+            li a {
+                font-size: 20px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        margin: 0 auto 27px;
+
+        .logo {
+            width: 145px;
+        }
+
+        nav ul {
+            gap: 10px;
+
+            li a {
+                font-size: 12px;
+                text-transform: uppercase;
+            }
+        }
+    }
+
 }

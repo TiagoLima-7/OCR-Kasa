@@ -1,9 +1,38 @@
+// .accomodation-list {
+//     display: grid;
+//     grid-template-columns: repeat(auto-fit, minmax(300px, 340px));
+//     column-gap: 60px;
+//     row-gap: 50px;
+//     background-color: rgba(246, 246, 246, 1);
+//     border-radius: 25px;
+//     padding: 56px 50px 43px;
+//     justify-content: center;
+
+//     @media screen and (max-width: 480px) {
+//         grid-template-columns: repeat(1, 1fr);
+//         padding: 0;
+//         row-gap: 20px;
+//         background-color: #FFFFFF;
+//     }
+// }
+
 .accomodation-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 60px;
-    row-gap: 50px;
-    background-color: rgba(246, 246, 246, 1);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px 60px;
+    background-color: rgb(246, 246, 246);
     border-radius: 25px;
-    padding: 50px 56px 43px;
+    padding: 56px 50px 43px;
+
+    @media (max-width: 1200px) {
+        padding: 25px;
+        gap: 20px;
+    }
+
+    @media (max-width: 767px) {
+        padding: 0;
+        background: transparent;
+        gap: 20px;
+    }
 }

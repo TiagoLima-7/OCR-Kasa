@@ -12,17 +12,41 @@
         height: 100%;
         background: rgba(0, 0, 0, 0.55);
         border-radius: 25px;
+        border: 1px solid #000000;
+        padding: 16px;
 
         display: flex;
         justify-content: center;
         align-items: center;
+
+
+        .banner-text {
+            font-size: clamp(24px, 3.5vw, 48px);
+            font-weight: 700;
+            color: #FFFFFF;
+            text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+            // -webkit-text-stroke: 1px #000;
+        }
     }
 
-    .banner-text {
-        font-size: 48px;
-        font-weight: 700;
-        color: #FFFFFF;
-        text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-        // -webkit-text-stroke: 1px #000;
+    @media screen and (max-width:991px) {
+        height: 185px;
+    }
+
+    @media screen and (max-width: 480px) {
+        height: 111px;
+        margin-bottom: 22px;
+        border-radius: 10px;
+
+        .banner-overlay {
+            justify-content: flex-start;
+            border-radius: 10px;
+
+            .banner-text {
+                width: 85%;
+            }
+        }
+
+
     }
 }

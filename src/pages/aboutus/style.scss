@@ -1,0 +1,40 @@
+.about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    .collapse-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        padding: 0 100px;
+        width: 100%;
+
+        .collapse {
+            width: 100%;
+
+
+            .collapse-header,
+            .collapse-content {
+                width: 100%;
+            }
+        }
+    }
+
+    @media screen and (max-width:991px) {
+        min-height: calc(100vh - 316px);
+
+        .collapse-container {
+            padding: 0 50px;
+        }
+    }
+
+    @media screen and (max-width:768px) {
+        .collapse-container {
+            padding: 0;
+        }
+    }
+}

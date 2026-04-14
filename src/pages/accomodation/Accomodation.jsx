@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 import accomodationsList from "../../assets/data/accomodations-list.json";
 import starActive from "../../assets/images/star-active.svg";
 import starInactive from "../../assets/images/star-inactive.svg";
@@ -11,13 +11,22 @@ const Accomodation = () => {
 
   const accomodation = accomodationsList.find((item) => item.id === id);
 
-  const [firstName, lastName] = accomodation.host.name.split(" ");
-
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  //Gestion de logement non trouvé
   if (!accomodation) {
-    return <div>Logement introuvable</div>;
+    // return (
+    //   <div className="accomodation-error">
+    //     <h2>Le logement demané n'est pas disponible.</h2>
+    //     <Link to="/" className="home-link">
+    //       Retour vers l'accueil
+    //     </Link>
+    //   </div>
+    // );
+    return <Navigate to="/404" />;
   }
+
+  const [firstName, lastName] = accomodation.host.name.split(" ");
 
   const pictures = accomodation.pictures;
 

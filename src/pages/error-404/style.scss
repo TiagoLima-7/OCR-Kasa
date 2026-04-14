@@ -18,6 +18,8 @@
         font-weight: 500;
         line-height: 143%;
         color: #FF6060;
+        text-align: center;
+        text-wrap: pretty;
     }
 
     .retour-link {
@@ -27,5 +29,46 @@
         margin-top: 50px;
         text-decoration: underline;
         color: #000000;
+    }
+
+    @media screen and (max-width: 991px) {
+        .text-404 {
+            font-size: 188px;
+        }
+
+        h2 {
+            font-size: 32px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+
+        min-height: calc(100vh - 368px);
+
+        .text-404 {
+            font-size: 144px;
+        }
+
+        h2 {
+            font-size: 26px;
+        }
+
+        .retour-link {
+            font-size: 14px;
+        }
+
+    }
+
+    @media screen and (max-width: 480px) {
+
+        min-height: calc(100vh - 316px);
+
+        .text-404 {
+            font-size: 96px;
+        }
+
+        h2 {
+            font-size: 18px;
+        }
     }
 }
