@@ -15,15 +15,7 @@ const Accomodation = () => {
 
   //Gestion de logement non trouvé
   if (!accomodation) {
-    // return (
-    //   <div className="accomodation-error">
-    //     <h2>Le logement demané n'est pas disponible.</h2>
-    //     <Link to="/" className="home-link">
-    //       Retour vers l'accueil
-    //     </Link>
-    //   </div>
-    // );
-    return <Navigate to="/404" />;
+    return <Navigate to="/error-404" />;
   }
 
   const [firstName, lastName] = accomodation.host.name.split(" ");
